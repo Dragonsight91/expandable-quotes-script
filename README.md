@@ -4,6 +4,8 @@ What in all heavens is this? Well, it's a Script that takes a package of service
 Installation is quite easy, here's how:
 1. Clone this repo into `~/.scripts`
     ```bash
+    mkdir ~/.scripts # create .scripts (only needed if it doesn't exist)
+    cd ~/.scripts
     git clone https://github.com/Dragonsight91/expandable-quotes-script
     ```
 2. **(optional)** to use it with my lockscreen *(you can find that in my [dotfiles repo](https://github.com/Dragonsight91/dotfiles))*, add a script named `get_quotes` in `~/.local/bin` like this:
