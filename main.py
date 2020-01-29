@@ -3,7 +3,8 @@ import json
 import random
 import textwrap
 import sys
-import services # get all services
+import os
+import services # get the services package
 
 # global vars
 cache = {}      # empty cache dict
@@ -36,7 +37,7 @@ def run():
 # use the cache
 def use_cache_file(write=False, cache={}):
     action = "w+" if write else "r+"
-    with open('/home/emma/.scripts/quotes/cache.json', action) as f:
+    with open(f'/home/{os.getenv("USER")}/.scripts/expandable-quotes-script/cache.json', action) as f:
         if(write):
             json.dump(cache, f, indent=4)
             return True

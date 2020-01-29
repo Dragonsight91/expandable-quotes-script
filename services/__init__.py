@@ -2,5 +2,5 @@
 from .simpquote import simpquote 
 from .inspirobot import inspirobot
 
-# name them here
+# add them here
 __all__ = ["inspirobot", "simpquote"]
