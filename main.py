@@ -1,14 +1,10 @@
 # imports
-import json
-import random
-import textwrap
-import sys
-import os
+import json, random, textwrap, sys, os
 import services # get the services package
 
 # global vars
 cache = {}      # empty cache dict
-cache_size = 20 # max amount of quotes cached 
+cache_size = 200 # max amount of quotes cached 
 
 # main function
 def run():

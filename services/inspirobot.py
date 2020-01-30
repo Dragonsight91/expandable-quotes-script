@@ -56,12 +56,8 @@ class inspirobot(object):
                 quotes.append(elem["text"])
 
         # sort quotes by length and take the shortest
-        quotes.sort(key=self.__get_len)
+        quotes.sort(key=lambda elem : len(elem))
         return quotes[0].replace('\n', ' ')
-
-    # didn't know how to lambda, temp function
-    def __get_len(self, elem):
-        return len(elem)
 
     # get a session
     def __get_session(self):
@@ -69,7 +65,7 @@ class inspirobot(object):
 
         # is there a sessionid? generate if no or if not valid
         if key in self.config:
-            if not self.__test_sessid():
+            if not self.__test_sessid() and not self.config[key] == "":
 
                 # gimme key, bish
                 return self.config[key]
