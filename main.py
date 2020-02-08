@@ -14,20 +14,22 @@ def run():
 
     # error? go to fallback cache
     if quote:
-        print(quote)
-
         # store quote in cache
         # if the cache isn't completely filled, just add it, otherwise replace a random quote
         if(len(cache["quote_cache"]) < cache_size):
             cache["quote_cache"].append(quote)
         else:
+    
             index = random.randint(0, len(cache["quote_cache"])-1)
             cache["quote_cache"][index] = quote
     else:
-        print(get_fallback())
+        quote = get_fallback()
+        
+    print(quote)
 
     # rewrite cache
     use_cache_file(cache=cache, write=True)
+    return quote
 
 
 # use the cache
