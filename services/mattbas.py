@@ -23,10 +23,10 @@ class mattbas(object):
     
     def get_quote(self):
         data = self.__get_data()
-
-        if not "error" in data:
+        
+        if type(data) is bool:
             return False
-        elif data["error"]:
+        if not "error" in data:
             return False
         
         quote = data["insult"]
