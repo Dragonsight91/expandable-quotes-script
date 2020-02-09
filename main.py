@@ -54,7 +54,7 @@ def get_service():
     return sys.modules[f'services.{services.__all__[index]}'].create(cache)
 
 
-# initializer
+# cli initializer
 if __name__ == "__main__":
     # initialize cache
     cache = use_cache_file(write=False)

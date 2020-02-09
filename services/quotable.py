@@ -21,7 +21,7 @@ class quotable(object):
 
     def __get_data(self):
         try:
-            url = f'{self.url}/random'
+            url = f'{self.url}/random?maxlength=50'
             response = req.get(url)
             response.raise_for_status()
         except Exception:
